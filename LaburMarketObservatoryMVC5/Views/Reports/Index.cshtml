@@ -1,0 +1,52 @@
+﻿@model IEnumerable<LaburMarketObservatoryMVC5.Models.Report>
+
+@{
+    ViewBag.Title = "تقرير";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>التقارير والدراسات</h2>
+
+<p>
+    @Html.ActionLink("اضافة تقرير", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.report_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.report_title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.report_file)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.report_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.report_title)
+        </td>
+        <td>
+            @*<img src="@Url.Content(item.report_title)" height="100" width="100" />*@
+            @{
+                var base64 = Convert.ToBase64String(item.report_file);
+                var filesrc = string.Format("data:image/gif;base64, {0}", base64);
+            }
+            <img src='@filesrc' style="max-width: 100px; max-height: 100px" />
+        </td>
+        <td>
+            @Html.ActionLink("تعديل", "Edit", new { id=item.report_id }) |
+            @Html.ActionLink("تفاصيل", "Details", new { id=item.report_id }) |
+            @Html.ActionLink("حذف", "Delete", new { id=item.report_id })
+        </td>
+    </tr>
+}
+
+</table>
+            @*@Html.DisplayFor(modelItem => item.report_file)*@

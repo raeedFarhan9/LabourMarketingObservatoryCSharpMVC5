@@ -1,0 +1,64 @@
+﻿@model IEnumerable<LaburMarketObservatoryMVC5.Models.JobOffer>
+
+@{
+    ViewBag.Title = "عروض العمل";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>عروض العمل</h2>
+
+<p>
+    @Html.ActionLink("اضافة عرض عمل", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.offer_type_of_employment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.offer_certificate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.offer_specialization)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.offer_experience_years)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.offer_working_hours)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.offer_salary)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.offer_type_of_employment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.offer_certificate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.offer_specialization)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.offer_experience_years)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.offer_working_hours)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.offer_salary)
+        </td>
+        <td>
+            @Html.ActionLink("تعديل", "Edit", new { id=item.advert_id }) |
+            @Html.ActionLink("تفاصيل", "Details", new { id=item.advert_id }) |
+            @Html.ActionLink("حذف", "Delete", new { id=item.advert_id })
+        </td>
+    </tr>
+}
+
+</table>

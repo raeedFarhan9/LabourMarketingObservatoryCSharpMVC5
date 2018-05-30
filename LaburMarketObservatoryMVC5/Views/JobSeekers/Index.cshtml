@@ -1,0 +1,62 @@
+﻿@model IEnumerable<LaburMarketObservatoryMVC5.Models.JobSeeker>
+
+@{
+    ViewBag.Title = "بانات الباحثين";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>بيانات الباحثين عن عمل</h2><br />
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.seeker_certificate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.seeker_specialization)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.seeker_experience_years)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.seeker_isEmployeed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.seeker_image1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AspNetUser.UserName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.seeker_certificate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.seeker_specialization)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.seeker_experience_years)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.seeker_isEmployeed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.seeker_image1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AspNetUser.UserName)
+        </td>
+        <td>
+            @Html.ActionLink("تعديل", "Edit", new { id=item.aspNetUsersId }) |
+            @Html.ActionLink("تفاصيل", "Details", new { id=item.aspNetUsersId }) |
+            @Html.ActionLink("حذف", "Delete", new { id=item.aspNetUsersId })
+        </td>
+    </tr>
+}
+
+</table>

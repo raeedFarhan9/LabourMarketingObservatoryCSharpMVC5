@@ -1,0 +1,68 @@
+﻿@model LaburMarketObservatoryMVC5.Models.Advertisement
+
+@{
+    ViewBag.Title = "تفاصيل";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>تفاصيل</h2>
+
+<div>
+    <h4>اعلان</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.advert_title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.advert_title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.advert_lecturer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.advert_lecturer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.advert_date_lecture)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.advert_date_lecture)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.advert_lecture_place)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.advert_lecture_place)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.advert_publish_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.advert_publish_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AspNetUser.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AspNetUser.UserName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("تعديل", "Edit", new { id = Model.advert_id }) |
+    @Html.ActionLink("العودة الى القائمة", "Index")
+</p>

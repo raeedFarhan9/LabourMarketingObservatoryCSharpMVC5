@@ -1,0 +1,112 @@
+﻿@model IEnumerable<LaburMarketObservatoryMVC5.Models.CompanyQuestionnaire>
+
+@{
+    ViewBag.Title = "الاستبيانات";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>استبيانات صاحب عمل</h2>
+
+<p>
+    @Html.ActionLink("أضافة استبيان", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Comunication)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.analysis_skills)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.leaning)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.leadership)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.problem_solving)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.efficiency)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.practical_experience)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.high_pay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.accepting_without_desier)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.emigration)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.focus_on_practice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.update_content)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.team_team_work)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AspNetUser.UserName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Comunication)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.analysis_skills)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.leaning)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.leadership)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.problem_solving)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.efficiency)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.practical_experience)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.high_pay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.accepting_without_desier)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.emigration)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.focus_on_practice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.update_content)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.team_team_work)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AspNetUser.UserName)
+        </td>
+        <td>
+            @*@Html.ActionLink("Edit", "Edit", new { id=item.comp_qus_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.comp_qus_id }) |*@
+            @Html.ActionLink("حذف", "Delete", new { id=item.comp_qus_id })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,52 @@
+﻿@model IEnumerable<LaburMarketObservatoryMVC5.Models.Advertisement>
+
+@{
+    ViewBag.Title = "الاعلانات";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>الاعلانات</h2>
+
+<p>
+    @Html.ActionLink("اضافة اعلان", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.advert_title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.advert_lecturer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.advert_date_lecture)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.advert_lecture_place)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.advert_title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.advert_lecturer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.advert_date_lecture)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.advert_lecture_place)
+        </td>
+        <td>
+            @Html.ActionLink("تعديل", "Edit", new { id=item.advert_id }) |
+            @Html.ActionLink("تفاصيل", "Details", new { id=item.advert_id }) |
+            @Html.ActionLink("حذف", "Delete", new { id=item.advert_id })
+        </td>
+    </tr>
+}
+
+</table>

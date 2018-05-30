@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="867daecebf944f4d85bc4ed91a4381a7" Name="Diagram1">
+        <EntityTypeShape EntityType="LMO_DBModel.Advertisement" Width="1.5" PointX="3" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMO_DBModel.ApplicantToJobOffer" Width="1.5" PointX="5.25" PointY="42.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMO_DBModel.ApplicantToTraining" Width="1.5" PointX="5.25" PointY="54.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMO_DBModel.AspNetRole" Width="1.5" PointX="3.75" PointY="24.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMO_DBModel.AspNetUserClaim" Width="1.5" PointX="3" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMO_DBModel.AspNetUserLogin" Width="1.5" PointX="3" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMO_DBModel.AspNetUserRole" Width="1.5" PointX="6" PointY="36.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMO_DBModel.AspNetUser" Width="1.5" PointX="0.75" PointY="33.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMO_DBModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMO_DBModel.Company" Width="1.5" PointX="6" PointY="32.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMO_DBModel.CompanyQuestionnaire" Width="1.5" PointX="3" PointY="30.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMO_DBModel.CompanySstatistic" Width="1.5" PointX="3" PointY="38" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMO_DBModel.Feedback" Width="1.5" PointX="3" PointY="35.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMO_DBModel.JobOffer" Width="1.5" PointX="3" PointY="48.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMO_DBModel.JobSeeker" Width="1.5" PointX="3" PointY="53.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMO_DBModel.Report" Width="1.5" PointX="3" PointY="57" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMO_DBModel.SeekerQuestionnaire" Width="1.5" PointX="3" PointY="59.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMO_DBModel.SeekerStatistic" Width="1.5" PointX="3" PointY="64.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMO_DBModel.Skill" Width="1.5" PointX="5.25" PointY="50.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMO_DBModel.sysdiagram" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMO_DBModel.SystemLicensedCompany" Width="1.5" PointX="3.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMO_DBModel.Training" Width="1.5" PointX="3" PointY="73.5" IsExpanded="true" />
+        <AssociationConnector Association="LMO_DBModel.FK_advertisement_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="LMO_DBModel.FK_applicants_to_job_offer_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="LMO_DBModel.FK_applicants_to_job_offer_job_offer" ManuallyRouted="false" />
+        <AssociationConnector Association="LMO_DBModel.FK_applicant_to_training_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="LMO_DBModel.FK_training_applicant_to_training" ManuallyRouted="false" />
+        <AssociationConnector Association="LMO_DBModel.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" ManuallyRouted="false" />
+        <AssociationConnector Association="LMO_DBModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="LMO_DBModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="LMO_DBModel.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="LMO_DBModel.FK_company_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="LMO_DBModel.FK_company_qustion_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="LMO_DBModel.FK_feedback_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="LMO_DBModel.FK_job_offers_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="LMO_DBModel.FK_job_seeker_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="LMO_DBModel.FK_qustion_seeker_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="LMO_DBModel.FK_report_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="LMO_DBModel.FK_statistic_comp_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="LMO_DBModel.FK_statistic_seeker_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="LMO_DBModel.FK_trainings_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="LMO_DBModel.FK_company_system_licensed_company" ManuallyRouted="false" />
+        <AssociationConnector Association="LMO_DBModel.FK_skill_job_offer" ManuallyRouted="false" />
+        <AssociationConnector Association="LMO_DBModel.FK_skill_job_seeker" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,73 @@
+﻿@model LaburMarketObservatoryMVC5.Models.Advertisement
+
+@{
+    ViewBag.Title = "حذف";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>حذف</h2>
+
+<h3>هل انت متأكد من الحذف؟</h3>
+<div>
+    <h4>اعلان</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.advert_title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.advert_title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.advert_lecturer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.advert_lecturer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.advert_date_lecture)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.advert_date_lecture)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.advert_lecture_place)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.advert_lecture_place)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.advert_publish_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.advert_publish_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AspNetUser.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AspNetUser.UserName)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="حذف" class="btn btn-danger" /> |
+            @Html.ActionLink("العودة الى القائمة", "Index")
+        </div>
+    }
+</div>

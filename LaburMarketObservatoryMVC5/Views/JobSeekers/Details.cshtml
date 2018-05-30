@@ -1,0 +1,59 @@
+﻿@model LaburMarketObservatoryMVC5.Models.JobSeeker
+
+@{
+    ViewBag.Title = "تفاصيل";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>تفاصيل</h2>
+
+<div>
+    <h4>باحث عن عمل</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.seeker_certificate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.seeker_certificate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.seeker_specialization)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.seeker_specialization)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.seeker_experience_years)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.seeker_experience_years)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.seeker_isEmployeed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.seeker_isEmployeed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AspNetUser.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AspNetUser.UserName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("تعديل", "Edit", new { id = Model.aspNetUsersId }) |
+    @Html.ActionLink("العودة الى القائمة", "Index")
+</p>

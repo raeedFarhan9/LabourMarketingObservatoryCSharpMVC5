@@ -1,0 +1,121 @@
+﻿@model LaburMarketObservatoryMVC5.Models.SeekerQuestionnaire
+
+@{
+    ViewBag.Title = "حذف";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>حذف</h2>
+
+<h3>هل انت متأكد من الحذف؟</h3>
+<div>
+    <h4>استبيان باحث عن عمل</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.no_suitable_opportunity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.no_suitable_opportunity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.low_pay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.low_pay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.routine)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.routine)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.long_job_seeking)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.long_job_seeking)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.not_enough_experience)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.not_enough_experience)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.contract)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.contract)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.kill_creativity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.kill_creativity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.update_content)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.update_content)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.traning)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.traning)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.keep_updated)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.keep_updated)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.field_trips)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.field_trips)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AspNetUser.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AspNetUser.UserName)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="حذف" class="btn btn-danger" /> |
+            @Html.ActionLink("العودة الى الفائمة", "Index")
+        </div>
+    }
+</div>

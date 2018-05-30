@@ -1,0 +1,51 @@
+﻿@model LaburMarketObservatoryMVC5.Models.Report
+
+@{
+    ViewBag.Title = "تفاصيل";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>تفاصيل</h2>
+
+<div>
+    <h4>تقرير</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.report_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.report_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.report_title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.report_title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.report_file)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.report_file)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AspNetUser.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AspNetUser.UserName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("تعديل", "Edit", new { id = Model.report_id }) |
+    @Html.ActionLink("العودة الى القائمة", "Index")
+</p>

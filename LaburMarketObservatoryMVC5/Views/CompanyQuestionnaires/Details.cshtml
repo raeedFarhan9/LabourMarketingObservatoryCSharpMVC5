@@ -1,0 +1,131 @@
+﻿@model LaburMarketObservatoryMVC5.Models.CompanyQuestionnaire
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CompanyQuestionnaire</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Comunication)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comunication)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.analysis_skills)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.analysis_skills)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.leaning)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.leaning)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.leadership)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.leadership)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.problem_solving)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.problem_solving)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.efficiency)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.efficiency)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.practical_experience)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.practical_experience)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.high_pay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.high_pay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.accepting_without_desier)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.accepting_without_desier)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.emigration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.emigration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.focus_on_practice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.focus_on_practice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.update_content)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.update_content)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.team_team_work)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.team_team_work)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AspNetUser.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AspNetUser.Email)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.comp_qus_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

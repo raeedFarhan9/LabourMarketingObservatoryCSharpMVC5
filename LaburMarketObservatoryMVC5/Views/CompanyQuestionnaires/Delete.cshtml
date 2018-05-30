@@ -1,0 +1,137 @@
+﻿@model LaburMarketObservatoryMVC5.Models.CompanyQuestionnaire
+
+@{
+    ViewBag.Title = "حذف";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>حذف</h2>
+
+<h3>هل انت متأكد من الحذف؟</h3>
+<div>
+    <h4>استبيان صاحب العمل</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Comunication)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comunication)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.analysis_skills)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.analysis_skills)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.leaning)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.leaning)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.leadership)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.leadership)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.problem_solving)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.problem_solving)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.efficiency)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.efficiency)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.practical_experience)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.practical_experience)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.high_pay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.high_pay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.accepting_without_desier)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.accepting_without_desier)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.emigration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.emigration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.focus_on_practice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.focus_on_practice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.update_content)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.update_content)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.team_team_work)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.team_team_work)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AspNetUser.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AspNetUser.UserName)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="حذف" class="btn btn-danger" /> |
+            @Html.ActionLink("العودة الى القائمة", "Index")
+        </div>
+    }
+</div>

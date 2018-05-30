@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LMO_DBModelStoreContainer" CdmEntityContainer="LMO_DBEntities">
+    <EntitySetMapping Name="Advertisements">
+      <EntityTypeMapping TypeName="LMO_DBModel.Advertisement">
+        <MappingFragment StoreEntitySet="Advertisement">
+          <ScalarProperty Name="advert_id" ColumnName="advert_id" />
+          <ScalarProperty Name="aspNetUsersId" ColumnName="aspNetUsersId" />
+          <ScalarProperty Name="advert_title" ColumnName="advert_title" />
+          <ScalarProperty Name="advert_lecturer" ColumnName="advert_lecturer" />
+          <ScalarProperty Name="advert_date_lecture" ColumnName="advert_date_lecture" />
+          <ScalarProperty Name="advert_lecture_place" ColumnName="advert_lecture_place" />
+          <ScalarProperty Name="advert_isActive" ColumnName="advert_isActive" />
+          <ScalarProperty Name="advert_publish_date" ColumnName="advert_publish_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ApplicantToJobOffers">
+      <EntityTypeMapping TypeName="LMO_DBModel.ApplicantToJobOffer">
+        <MappingFragment StoreEntitySet="ApplicantToJobOffer">
+          <ScalarProperty Name="job_offer_id" ColumnName="job_offer_id" />
+          <ScalarProperty Name="aspNetUsersId" ColumnName="aspNetUsersId" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ApplicantToTrainings">
+      <EntityTypeMapping TypeName="LMO_DBModel.ApplicantToTraining">
+        <MappingFragment StoreEntitySet="ApplicantToTraining">
+          <ScalarProperty Name="aspNetUsersId" ColumnName="aspNetUsersId" />
+          <ScalarProperty Name="training_id" ColumnName="training_id" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetRoles">
+      <EntityTypeMapping TypeName="LMO_DBModel.AspNetRole">
+        <MappingFragment StoreEntitySet="AspNetRoles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserClaims">
+      <EntityTypeMapping TypeName="LMO_DBModel.AspNetUserClaim">
+        <MappingFragment StoreEntitySet="AspNetUserClaims">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserLogins">
+      <EntityTypeMapping TypeName="LMO_DBModel.AspNetUserLogin">
+        <MappingFragment StoreEntitySet="AspNetUserLogins">
+          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+          <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserRoles">
+      <EntityTypeMapping TypeName="LMO_DBModel.AspNetUserRole">
+        <MappingFragment StoreEntitySet="AspNetUserRoles">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUsers">
+      <EntityTypeMapping TypeName="LMO_DBModel.AspNetUser">
+        <MappingFragment StoreEntitySet="AspNetUsers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="personal_image" ColumnName="personal_image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="LMO_DBModel.C__MigrationHistory">
+        <MappingFragment StoreEntitySet="C__MigrationHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Companies">
+      <EntityTypeMapping TypeName="LMO_DBModel.Company">
+        <MappingFragment StoreEntitySet="Company">
+          <ScalarProperty Name="aspNetUsersId" ColumnName="aspNetUsersId" />
+          <ScalarProperty Name="comp_name" ColumnName="comp_name" />
+          <ScalarProperty Name="comp_special" ColumnName="comp_special" />
+          <ScalarProperty Name="comp_page_link" ColumnName="comp_page_link" />
+          <ScalarProperty Name="licensed_comp_licenseNumber" ColumnName="licensed_comp_licenseNumber" />
+          <ScalarProperty Name="comp_image1" ColumnName="comp_image1" />
+          <ScalarProperty Name="comp_image2" ColumnName="comp_image2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CompanyQuestionnaires">
+      <EntityTypeMapping TypeName="LMO_DBModel.CompanyQuestionnaire">
+        <MappingFragment StoreEntitySet="CompanyQuestionnaire">
+          <ScalarProperty Name="compQuestionnair_publishDate_" ColumnName="compQuestionnair_publishDate_" />
+          <ScalarProperty Name="comp_qus_id" ColumnName="comp_qus_id" />
+          <ScalarProperty Name="aspNetUsersId" ColumnName="aspNetUsersId" />
+          <ScalarProperty Name="Comunication" ColumnName="Comunication" />
+          <ScalarProperty Name="analysis_skills" ColumnName="analysis_skills" />
+          <ScalarProperty Name="leaning" ColumnName="leaning" />
+          <ScalarProperty Name="leadership" ColumnName="leadership" />
+          <ScalarProperty Name="problem_solving" ColumnName="problem_solving" />
+          <ScalarProperty Name="efficiency" ColumnName="efficiency" />
+          <ScalarProperty Name="practical_experience" ColumnName="practical_experience" />
+          <ScalarProperty Name="high_pay" ColumnName="high_pay" />
+          <ScalarProperty Name="accepting_without_desier" ColumnName="accepting_without_desier" />
+          <ScalarProperty Name="emigration" ColumnName="emigration" />
+          <ScalarProperty Name="focus_on_practice" ColumnName="focus_on_practice" />
+          <ScalarProperty Name="update_content" ColumnName="update_content" />
+          <ScalarProperty Name="team_team_work" ColumnName="team_team_work" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CompanySstatistics">
+      <EntityTypeMapping TypeName="LMO_DBModel.CompanySstatistic">
+        <MappingFragment StoreEntitySet="CompanySstatistic">
+          <ScalarProperty Name="statistic_id" ColumnName="statistic_id" />
+          <ScalarProperty Name="aspNetUsersId" ColumnName="aspNetUsersId" />
+          <ScalarProperty Name="statistic_date" ColumnName="statistic_date" />
+          <ScalarProperty Name="statistic_isActive" ColumnName="statistic_isActive" />
+          <ScalarProperty Name="statistic_certificate" ColumnName="statistic_certificate" />
+          <ScalarProperty Name="statistic_specialization" ColumnName="statistic_specialization" />
+          <ScalarProperty Name="statistic_comunication1" ColumnName="statistic_comunication1" />
+          <ScalarProperty Name="statistic_comunication2" ColumnName="statistic_comunication2" />
+          <ScalarProperty Name="statistic_comunication3" ColumnName="statistic_comunication3" />
+          <ScalarProperty Name="statistic_analysis_skills1" ColumnName="statistic_analysis_skills1" />
+          <ScalarProperty Name="statistic_analysis_skills2" ColumnName="statistic_analysis_skills2" />
+          <ScalarProperty Name="C_statistic_analysis_skills3" ColumnName="C_statistic_analysis_skills3" />
+          <ScalarProperty Name="statistic_leaning1" ColumnName="statistic_leaning1" />
+          <ScalarProperty Name="statistic_leaning2" ColumnName="statistic_leaning2" />
+          <ScalarProperty Name="statistic_leaning3" ColumnName="statistic_leaning3" />
+          <ScalarProperty Name="statistic_leadership1" ColumnName="statistic_leadership1" />
+          <ScalarProperty Name="statistic_leadership2" ColumnName="statistic_leadership2" />
+          <ScalarProperty Name="statistic_leadership3" ColumnName="statistic_leadership3" />
+          <ScalarProperty Name="statistic_problem_solving1" ColumnName="statistic_problem_solving1" />
+          <ScalarProperty Name="statistic_problem_solving2" ColumnName="statistic_problem_solving2" />
+          <ScalarProperty Name="statistic_problem_solving3" ColumnName="statistic_problem_solving3" />
+          <ScalarProperty Name="statistic_efficiency1" ColumnName="statistic_efficiency1" />
+          <ScalarProperty Name="statistic_efficiency2" ColumnName="statistic_efficiency2" />
+          <ScalarProperty Name="statistic_efficiency3" ColumnName="statistic_efficiency3" />
+          <ScalarProperty Name="statistic_practical_experience1" ColumnName="statistic_practical_experience1" />
+          <ScalarProperty Name="statistic_practical_experience2" ColumnName="statistic_practical_experience2" />
+          <ScalarProperty Name="statistic_practical_experience3" ColumnName="statistic_practical_experience3" />
+          <ScalarProperty Name="statistic_high_pay1" ColumnName="statistic_high_pay1" />
+          <ScalarProperty Name="statistic_high_pay2" ColumnName="statistic_high_pay2" />
+          <ScalarProperty Name="statistic_high_pay3" ColumnName="statistic_high_pay3" />
+          <ScalarProperty Name="statistic_accepting_without_desier1" ColumnName="statistic_accepting_without_desier1" />
+          <ScalarProperty Name="statistic_accepting_without_desier2" ColumnName="statistic_accepting_without_desier2" />
+          <ScalarProperty Name="statistic_accepting_without_desier3" ColumnName="statistic_accepting_without_desier3" />
+          <ScalarProperty Name="statistic_emigration1" ColumnName="statistic_emigration1" />
+          <ScalarProperty Name="statistic_emigration2" ColumnName="statistic_emigration2" />
+          <ScalarProperty Name="statistic_emigration3" ColumnName="statistic_emigration3" />
+          <ScalarProperty Name="statistic_focus_on_practice1" ColumnName="statistic_focus_on_practice1" />
+          <ScalarProperty Name="statistic_focus_on_practice2" ColumnName="statistic_focus_on_practice2" />
+          <ScalarProperty Name="statistic_focus_on_practice3" ColumnName="statistic_focus_on_practice3" />
+          <ScalarProperty Name="statistic_update_content1" ColumnName="statistic_update_content1" />
+          <ScalarProperty Name="statistic_update_content2" ColumnName="statistic_update_content2" />
+          <ScalarProperty Name="statistic_update_content3" ColumnName="statistic_update_content3" />
+          <ScalarProperty Name="statistic_team_work1" ColumnName="statistic_team_work1" />
+          <ScalarProperty Name="statistic_team_work2" ColumnName="statistic_team_work2" />
+          <ScalarProperty Name="statistic_team_work3" ColumnName="statistic_team_work3" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Feedbacks">
+      <EntityTypeMapping TypeName="LMO_DBModel.Feedback">
+        <MappingFragment StoreEntitySet="Feedback">
+          <ScalarProperty Name="feedback_id" ColumnName="feedback_id" />
+          <ScalarProperty Name="aspNetUsersId" ColumnName="aspNetUsersId" />
+          <ScalarProperty Name="feedback_text" ColumnName="feedback_text" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobOffers">
+      <EntityTypeMapping TypeName="LMO_DBModel.JobOffer">
+        <MappingFragment StoreEntitySet="JobOffer">
+          <ScalarProperty Name="advert_id" ColumnName="advert_id" />
+          <ScalarProperty Name="aspNetUsersId" ColumnName="aspNetUsersId" />
+          <ScalarProperty Name="offer_emp_num" ColumnName="offer_emp_num" />
+          <ScalarProperty Name="offer_type_of_employment" ColumnName="offer_type_of_employment" />
+          <ScalarProperty Name="offer_certificate" ColumnName="offer_certificate" />
+          <ScalarProperty Name="offer_specialization" ColumnName="offer_specialization" />
+          <ScalarProperty Name="offer_experience_years" ColumnName="offer_experience_years" />
+          <ScalarProperty Name="offer_gender" ColumnName="offer_gender" />
+          <ScalarProperty Name="offer_age" ColumnName="offer_age" />
+          <ScalarProperty Name="offer_address" ColumnName="offer_address" />
+          <ScalarProperty Name="offer_working_hours" ColumnName="offer_working_hours" />
+          <ScalarProperty Name="offer_salary" ColumnName="offer_salary" />
+          <ScalarProperty Name="offer_active" ColumnName="offer_active" />
+          <ScalarProperty Name="offer_publishDate" ColumnName="offer_publishDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobSeekers">
+      <EntityTypeMapping TypeName="LMO_DBModel.JobSeeker">
+        <MappingFragment StoreEntitySet="JobSeeker">
+          <ScalarProperty Name="aspNetUsersId" ColumnName="aspNetUsersId" />
+          <ScalarProperty Name="seeker_certificate" ColumnName="seeker_certificate" />
+          <ScalarProperty Name="seeker_specialization" ColumnName="seeker_specialization" />
+          <ScalarProperty Name="seeker_experience_years" ColumnName="seeker_experience_years" />
+          <ScalarProperty Name="seeker_isEmployeed" ColumnName="seeker_isEmployeed" />
+          <ScalarProperty Name="seeker_image1" ColumnName="seeker_image1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reports">
+      <EntityTypeMapping TypeName="LMO_DBModel.Report">
+        <MappingFragment StoreEntitySet="Report">
+          <ScalarProperty Name="report_id" ColumnName="report_id" />
+          <ScalarProperty Name="aspNetUsersId" ColumnName="aspNetUsersId" />
+          <ScalarProperty Name="report_date" ColumnName="report_date" />
+          <ScalarProperty Name="report_title" ColumnName="report_title" />
+          <ScalarProperty Name="report_file" ColumnName="report_file" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SeekerQuestionnaires">
+      <EntityTypeMapping TypeName="LMO_DBModel.SeekerQuestionnaire">
+        <MappingFragment StoreEntitySet="SeekerQuestionnaire">
+          <ScalarProperty Name="seekerQuestionnair_publishDate" ColumnName="seekerQuestionnair_publishDate" />
+          <ScalarProperty Name="seeker_quis_id" ColumnName="seeker_quis_id" />
+          <ScalarProperty Name="aspNetUsersId" ColumnName="aspNetUsersId" />
+          <ScalarProperty Name="no_suitable_opportunity" ColumnName="no_suitable_opportunity" />
+          <ScalarProperty Name="low_pay" ColumnName="low_pay" />
+          <ScalarProperty Name="routine" ColumnName="routine" />
+          <ScalarProperty Name="long_job_seeking" ColumnName="long_job_seeking" />
+          <ScalarProperty Name="not_enough_experience" ColumnName="not_enough_experience" />
+          <ScalarProperty Name="contract" ColumnName="contract" />
+          <ScalarProperty Name="kill_creativity" ColumnName="kill_creativity" />
+          <ScalarProperty Name="update_content" ColumnName="update_content" />
+          <ScalarProperty Name="traning" ColumnName="traning" />
+          <ScalarProperty Name="keep_updated" ColumnName="keep_updated" />
+          <ScalarProperty Name="field_trips" ColumnName="field_trips" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SeekerStatistics">
+      <EntityTypeMapping TypeName="LMO_DBModel.SeekerStatistic">
+        <MappingFragment StoreEntitySet="SeekerStatistic">
+          <ScalarProperty Name="statistic_seeker_id" ColumnName="statistic_seeker_id" />
+          <ScalarProperty Name="aspNetUsersId" ColumnName="aspNetUsersId" />
+          <ScalarProperty Name="statistic_seeker_date" ColumnName="statistic_seeker_date" />
+          <ScalarProperty Name="statistic_no_suitable_opportunity3" ColumnName="statistic_no_suitable_opportunity3" />
+          <ScalarProperty Name="statistic_no_suitable_opportunity2" ColumnName="statistic_no_suitable_opportunity2" />
+          <ScalarProperty Name="statistic_no_suitable_opportunity1" ColumnName="statistic_no_suitable_opportunity1" />
+          <ScalarProperty Name="statistic_low_pay3" ColumnName="statistic_low_pay3" />
+          <ScalarProperty Name="statistic_low_pay2" ColumnName="statistic_low_pay2" />
+          <ScalarProperty Name="statistic_low_pay1" ColumnName="statistic_low_pay1" />
+          <ScalarProperty Name="statistic_routine3" ColumnName="statistic_routine3" />
+          <ScalarProperty Name="statistic_routine2" ColumnName="statistic_routine2" />
+          <ScalarProperty Name="statistic_routine1" ColumnName="statistic_routine1" />
+          <ScalarProperty Name="statistic_long_job_seeking3" ColumnName="statistic_long_job_seeking3" />
+          <ScalarProperty Name="statistic_long_job_seeking2" ColumnName="statistic_long_job_seeking2" />
+          <ScalarProperty Name="statistic_long_job_seeking1" ColumnName="statistic_long_job_seeking1" />
+          <ScalarProperty Name="statistic_not_enough_experience3" ColumnName="statistic_not_enough_experience3" />
+          <ScalarProperty Name="statistic_not_enough_experience2" ColumnName="statistic_not_enough_experience2" />
+          <ScalarProperty Name="statistic_not_enough_experience1" ColumnName="statistic_not_enough_experience1" />
+          <ScalarProperty Name="statistic_contract3" ColumnName="statistic_contract3" />
+          <ScalarProperty Name="statistic_contract2" ColumnName="statistic_contract2" />
+          <ScalarProperty Name="statistic_contract1" ColumnName="statistic_contract1" />
+          <ScalarProperty Name="statistic_kill_creativity3" ColumnName="statistic_kill_creativity3" />
+          <ScalarProperty Name="statistic_kill_creativity2" ColumnName="statistic_kill_creativity2" />
+          <ScalarProperty Name="statistic_kill_creativity1" ColumnName="statistic_kill_creativity1" />
+          <ScalarProperty Name="statistic_seeker_update_content3" ColumnName="statistic_seeker_update_content3" />
+          <ScalarProperty Name="statistic_seeker_update_content2" ColumnName="statistic_seeker_update_content2" />
+          <ScalarProperty Name="statistic_seeker_update_content1" ColumnName="statistic_seeker_update_content1" />
+          <ScalarProperty Name="statistic_traning3" ColumnName="statistic_traning3" />
+          <ScalarProperty Name="statistic_traning2" ColumnName="statistic_traning2" />
+          <ScalarProperty Name="statistic_traning1" ColumnName="statistic_traning1" />
+          <ScalarProperty Name="statistic_keep_updated3" ColumnName="statistic_keep_updated3" />
+          <ScalarProperty Name="statistic_keep_updated2" ColumnName="statistic_keep_updated2" />
+          <ScalarProperty Name="statistic_keep_updated1" ColumnName="statistic_keep_updated1" />
+          <ScalarProperty Name="statistic_field_trips3" ColumnName="statistic_field_trips3" />
+          <ScalarProperty Name="statistic_field_trips2" ColumnName="statistic_field_trips2" />
+          <ScalarProperty Name="statistic_field_trips1" ColumnName="statistic_field_trips1" />
+          <ScalarProperty Name="statistic_seeker_isActive" ColumnName="statistic_seeker_isActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Skills">
+      <EntityTypeMapping TypeName="LMO_DBModel.Skill">
+        <MappingFragment StoreEntitySet="Skill">
+          <ScalarProperty Name="skill_id" ColumnName="skill_id" />
+          <ScalarProperty Name="offer_id" ColumnName="offer_id" />
+          <ScalarProperty Name="seeker_id" ColumnName="seeker_id" />
+          <ScalarProperty Name="skill_name" ColumnName="skill_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="LMO_DBModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SystemLicensedCompanies">
+      <EntityTypeMapping TypeName="LMO_DBModel.SystemLicensedCompany">
+        <MappingFragment StoreEntitySet="SystemLicensedCompany">
+          <ScalarProperty Name="licensed_comp_licenseNumber" ColumnName="licensed_comp_licenseNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Trainings">
+      <EntityTypeMapping TypeName="LMO_DBModel.Training">
+        <MappingFragment StoreEntitySet="Training">
+          <ScalarProperty Name="training_id" ColumnName="training_id" />
+          <ScalarProperty Name="aspNetUsersId" ColumnName="aspNetUsersId" />
+          <ScalarProperty Name="training_subject" ColumnName="training_subject" />
+          <ScalarProperty Name="training_instructor" ColumnName="training_instructor" />
+          <ScalarProperty Name="training_place" ColumnName="training_place" />
+          <ScalarProperty Name="trainingStartDate" ColumnName="trainingStartDate" />
+          <ScalarProperty Name="trainingEndDate" ColumnName="trainingEndDate" />
+          <ScalarProperty Name="training_cost" ColumnName="training_cost" />
+          <ScalarProperty Name="training_publishDate" ColumnName="training_publishDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

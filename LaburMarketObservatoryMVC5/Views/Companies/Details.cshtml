@@ -1,0 +1,67 @@
+﻿@model LaburMarketObservatoryMVC5.Models.Company
+
+@{
+    ViewBag.Title = "تفاصيل";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>تفاصيل</h2>
+
+<div>
+    <h4>مؤسسة</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.comp_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.comp_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.comp_special)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.comp_special)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.comp_page_link)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.comp_page_link)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.comp_image1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.comp_image1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.comp_image2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.comp_image2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AspNetUser.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AspNetUser.UserName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("تعديل", "Edit", new { id = Model.aspNetUsersId }) |
+    @Html.ActionLink("العودة الى القائمة", "Index")
+</p>

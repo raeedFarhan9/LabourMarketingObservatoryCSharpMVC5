@@ -1,0 +1,64 @@
+﻿@model IEnumerable<LaburMarketObservatoryMVC5.Models.Company>
+
+@{
+    ViewBag.Title = "بيانات الشركات";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>بيانات الشركات</h2>
+
+<p>
+    @Html.ActionLink("اضافة بيانات", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.comp_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.comp_special)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.comp_page_link)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.comp_image1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.comp_image2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AspNetUser.UserName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.comp_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.comp_special)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.comp_page_link)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.comp_image1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.comp_image2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AspNetUser.UserName)
+        </td>
+        <td>
+            @Html.ActionLink("تعديل", "Edit", new { id=item.aspNetUsersId }) |
+            @Html.ActionLink("تفاصيل", "Details", new { id=item.aspNetUsersId }) |
+            @Html.ActionLink("حذف", "Delete", new { id=item.aspNetUsersId })
+        </td>
+    </tr>
+}
+
+</table>

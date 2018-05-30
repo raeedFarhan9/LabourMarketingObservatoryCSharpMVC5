@@ -1,0 +1,43 @@
+﻿@model LaburMarketObservatoryMVC5.Models.Feedback
+
+@{
+    ViewBag.Title = "اضافة";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>اضافة</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>اقتراح</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.feedback_text, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.feedback_text, new { style = "display: block;  width: 200%;  height: 300px;  padding: 6px 12px;  font-size: 14px;  line-height: 1.428571429;  color: #555555;  vertical-align: middle;  background-color: #ffffff;  background-image: none;  border: 1px solid #cccccc;  border-radius: 4px;  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;          transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;" })
+               @Html.ValidationMessageFor(model => model.feedback_text, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="اضافة" class="btn btn-success" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("العودة الى القائمة", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,121 @@
+﻿@model LaburMarketObservatoryMVC5.Models.JobOffer
+
+@{
+    ViewBag.Title = "حذف";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>حذف</h2>
+
+<h3>هل انت متأكد من الحذف؟</h3>
+<div>
+    <h4>عرض العمل</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.offer_emp_num)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.offer_emp_num)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.offer_type_of_employment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.offer_type_of_employment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.offer_certificate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.offer_certificate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.offer_specialization)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.offer_specialization)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.offer_experience_years)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.offer_experience_years)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.offer_gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.offer_gender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.offer_age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.offer_age)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.offer_address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.offer_address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.offer_working_hours)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.offer_working_hours)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.offer_salary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.offer_salary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.offer_publishDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.offer_publishDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AspNetUser.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AspNetUser.UserName)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="حذف" class="btn btn-danger" /> |
+            @Html.ActionLink("العودة الى القائمة", "Index")
+        </div>
+    }
+</div>

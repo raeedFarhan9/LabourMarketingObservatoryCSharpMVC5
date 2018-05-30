@@ -1,0 +1,94 @@
+﻿@model IEnumerable<LaburMarketObservatoryMVC5.Models.SeekerQuestionnaire>
+
+@{
+    ViewBag.Title = "الاستبيانات";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>الاستبيانات</h2>
+
+<p>
+    @Html.ActionLink("اضافة استبيان", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.no_suitable_opportunity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.low_pay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.routine)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.long_job_seeking)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.not_enough_experience)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.contract)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.kill_creativity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.update_content)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.traning)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.keep_updated)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.field_trips)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.no_suitable_opportunity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.low_pay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.routine)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.long_job_seeking)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.not_enough_experience)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.contract)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.kill_creativity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.update_content)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.traning)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.keep_updated)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.field_trips)
+        </td>
+        <td>
+            @*@Html.ActionLink("تعديل", "Edit", new { id=item.seeker_quis_id }) |
+            @Html.ActionLink("تفاصيل", "Details", new { id=item.seeker_quis_id }) |*@
+            @Html.ActionLink("حذف", "Delete", new { id=item.seeker_quis_id })
+        </td>
+    </tr>
+}
+
+</table>

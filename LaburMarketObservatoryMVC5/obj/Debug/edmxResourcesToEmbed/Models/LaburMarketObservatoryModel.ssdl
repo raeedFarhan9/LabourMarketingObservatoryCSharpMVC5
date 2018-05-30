@@ -1,0 +1,703 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LMO_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="advertisements">
+    <Key>
+      <PropertyRef Name="advert_id" />
+    </Key>
+    <Property Name="advert_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="aspNetUsersId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="advert_text" Type="varchar(max)" Nullable="false" />
+    <Property Name="advert_publish_date" Type="datetime" />
+    <Property Name="advert_isActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="applicant_to_trainings">
+    <Key>
+      <PropertyRef Name="aspNetUsersId" />
+      <PropertyRef Name="training_id" />
+    </Key>
+    <Property Name="aspNetUsersId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="training_id" Type="int" Nullable="false" />
+    <Property Name="note" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="applicants_to_job_offers">
+    <Key>
+      <PropertyRef Name="job_offer_id" />
+      <PropertyRef Name="aspNetUsersId" />
+    </Key>
+    <Property Name="job_offer_id" Type="int" Nullable="false" />
+    <Property Name="aspNetUsersId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="note" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="AspNetRoles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaims">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ClaimType" Type="nvarchar(max)" />
+    <Property Name="ClaimValue" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogins">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ProviderKey" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Note" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="AspNetUsers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+    <Property Name="PasswordHash" Type="nvarchar(max)" />
+    <Property Name="SecurityStamp" Type="nvarchar(max)" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" />
+    <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="datetime" />
+    <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="address" Type="varchar" MaxLength="50" />
+    <Property Name="age" Type="int" />
+    <Property Name="gender" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="C__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="companies">
+    <Key>
+      <PropertyRef Name="aspNetUsersId" />
+    </Key>
+    <Property Name="aspNetUsersId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="comp_name" Type="varchar" MaxLength="50" />
+    <Property Name="comp_special" Type="varchar" MaxLength="50" />
+    <Property Name="comp_page_link" Type="nchar" MaxLength="100" />
+    <Property Name="licensed_comp_licenseNumber" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="company_qustions">
+    <Key>
+      <PropertyRef Name="comp_qus_id" />
+    </Key>
+    <Property Name="comp_qus_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="aspNetUsersId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Comunication" Type="int" Nullable="false" />
+    <Property Name="analysis_skills" Type="int" Nullable="false" />
+    <Property Name="leaning" Type="int" Nullable="false" />
+    <Property Name="leadership" Type="int" Nullable="false" />
+    <Property Name="problem_solving" Type="int" Nullable="false" />
+    <Property Name="efficiency" Type="int" Nullable="false" />
+    <Property Name="practical_experience" Type="int" Nullable="false" />
+    <Property Name="high_pay" Type="int" Nullable="false" />
+    <Property Name="accepting_without_desier" Type="int" Nullable="false" />
+    <Property Name="emigration" Type="int" Nullable="false" />
+    <Property Name="focus_on_practice" Type="int" Nullable="false" />
+    <Property Name="update_content" Type="int" Nullable="false" />
+    <Property Name="team_team_work" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="feedbacks">
+    <Key>
+      <PropertyRef Name="feedback_id" />
+    </Key>
+    <Property Name="feedback_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="aspNetUsersId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="feedback_text" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="job_offers">
+    <Key>
+      <PropertyRef Name="advert_id" />
+    </Key>
+    <Property Name="advert_id" Type="int" Nullable="false" />
+    <Property Name="offer_emp_num" Type="int" />
+    <Property Name="offer_certificate" Type="varchar" MaxLength="50" />
+    <Property Name="offer_specialization" Type="varchar" MaxLength="50" />
+    <Property Name="offer_experience_years" Type="int" />
+    <Property Name="offer_gender" Type="varchar" MaxLength="50" />
+    <Property Name="offer_age" Type="int" />
+    <Property Name="offer_address" Type="varchar" MaxLength="50" />
+    <Property Name="offer_working_hours" Type="int" />
+    <Property Name="offer_type_of_employment" Type="varchar" MaxLength="50" />
+    <Property Name="offer_salary" Type="float" />
+    <Property Name="offer_active" Type="bit" />
+  </EntityType>
+  <EntityType Name="job_seekers">
+    <Key>
+      <PropertyRef Name="aspNetUsersId" />
+    </Key>
+    <Property Name="aspNetUsersId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="seeker_certificate" Type="varchar" MaxLength="50" />
+    <Property Name="seeker_specialization" Type="varchar" MaxLength="50" />
+    <Property Name="seeker_experience_years" Type="int" />
+    <Property Name="seeker_isEmployeed" Type="bit" />
+  </EntityType>
+  <EntityType Name="qustion_seekers">
+    <Key>
+      <PropertyRef Name="seeker_quis_id" />
+    </Key>
+    <Property Name="seeker_quis_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="aspNetUsersId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="no_suitable_opportunity" Type="int" Nullable="false" />
+    <Property Name="low_pay" Type="int" Nullable="false" />
+    <Property Name="routine" Type="int" Nullable="false" />
+    <Property Name="long_job_seeking" Type="int" Nullable="false" />
+    <Property Name="not_enough_experience" Type="int" Nullable="false" />
+    <Property Name="contract" Type="int" Nullable="false" />
+    <Property Name="kill_creativity" Type="int" Nullable="false" />
+    <Property Name="update_content" Type="int" Nullable="false" />
+    <Property Name="traning" Type="int" Nullable="false" />
+    <Property Name="keep_updated" Type="int" Nullable="false" />
+    <Property Name="field_trips" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="reports">
+    <Key>
+      <PropertyRef Name="report_id" />
+    </Key>
+    <Property Name="report_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="aspNetUsersId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="report_date" Type="datetime" Nullable="false" />
+    <Property Name="report_title" Type="varchar" MaxLength="100" />
+    <Property Name="report_file" Type="varbinary(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="skills">
+    <Key>
+      <PropertyRef Name="skill_id" />
+    </Key>
+    <Property Name="skill_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="offer_id" Type="int" />
+    <Property Name="seeker_id" Type="nvarchar" MaxLength="128" />
+    <Property Name="skill_name" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="statistic_comps">
+    <Key>
+      <PropertyRef Name="statistic_id" />
+    </Key>
+    <Property Name="statistic_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="aspNetUsersId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="statistic_date" Type="datetime" Nullable="false" />
+    <Property Name="statistic_isActive" Type="bit" />
+    <Property Name="statistic_certificate" Type="float" Nullable="false" />
+    <Property Name="statistic_specialization" Type="float" Nullable="false" />
+    <Property Name="statistic_comunication1" Type="float" Nullable="false" />
+    <Property Name="statistic_comunication2" Type="float" Nullable="false" />
+    <Property Name="statistic_comunication3" Type="float" Nullable="false" />
+    <Property Name="statistic_analysis_skills1" Type="float" Nullable="false" />
+    <Property Name="statistic_analysis_skills2" Type="float" Nullable="false" />
+    <Property Name="C_statistic_analysis_skills3" Type="float" Nullable="false" />
+    <Property Name="statistic_leaning1" Type="float" Nullable="false" />
+    <Property Name="statistic_leaning2" Type="float" Nullable="false" />
+    <Property Name="statistic_leaning3" Type="float" Nullable="false" />
+    <Property Name="statistic_leadership1" Type="float" Nullable="false" />
+    <Property Name="statistic_leadership2" Type="float" Nullable="false" />
+    <Property Name="statistic_leadership3" Type="float" Nullable="false" />
+    <Property Name="statistic_problem_solving1" Type="float" Nullable="false" />
+    <Property Name="statistic_problem_solving2" Type="float" Nullable="false" />
+    <Property Name="statistic_problem_solving3" Type="float" Nullable="false" />
+    <Property Name="statistic_efficiency1" Type="float" Nullable="false" />
+    <Property Name="statistic_efficiency2" Type="float" Nullable="false" />
+    <Property Name="statistic_efficiency3" Type="float" Nullable="false" />
+    <Property Name="statistic_practical_experience1" Type="float" Nullable="false" />
+    <Property Name="statistic_practical_experience2" Type="float" Nullable="false" />
+    <Property Name="statistic_practical_experience3" Type="float" Nullable="false" />
+    <Property Name="statistic_high_pay1" Type="float" Nullable="false" />
+    <Property Name="statistic_high_pay2" Type="float" Nullable="false" />
+    <Property Name="statistic_high_pay3" Type="float" Nullable="false" />
+    <Property Name="statistic_accepting_without_desier1" Type="float" Nullable="false" />
+    <Property Name="statistic_accepting_without_desier2" Type="float" Nullable="false" />
+    <Property Name="statistic_accepting_without_desier3" Type="float" Nullable="false" />
+    <Property Name="statistic_emigration1" Type="float" Nullable="false" />
+    <Property Name="statistic_emigration2" Type="float" Nullable="false" />
+    <Property Name="statistic_emigration3" Type="float" Nullable="false" />
+    <Property Name="statistic_focus_on_practice1" Type="float" Nullable="false" />
+    <Property Name="statistic_focus_on_practice2" Type="float" Nullable="false" />
+    <Property Name="statistic_focus_on_practice3" Type="float" Nullable="false" />
+    <Property Name="statistic_update_content1" Type="float" Nullable="false" />
+    <Property Name="statistic_update_content2" Type="float" Nullable="false" />
+    <Property Name="statistic_update_content3" Type="float" Nullable="false" />
+    <Property Name="statistic_team_work1" Type="float" Nullable="false" />
+    <Property Name="statistic_team_work2" Type="float" Nullable="false" />
+    <Property Name="statistic_team_work3" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="statistic_seekers">
+    <Key>
+      <PropertyRef Name="statistic_seeker_id" />
+    </Key>
+    <Property Name="statistic_seeker_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="aspNetUsersId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="statistic_seeker_date" Type="datetime" Nullable="false" />
+    <Property Name="statistic_no_suitable_opportunity3" Type="float" Nullable="false" />
+    <Property Name="statistic_no_suitable_opportunity2" Type="float" Nullable="false" />
+    <Property Name="statistic_no_suitable_opportunity1" Type="float" Nullable="false" />
+    <Property Name="statistic_low_pay3" Type="float" Nullable="false" />
+    <Property Name="statistic_low_pay2" Type="float" Nullable="false" />
+    <Property Name="statistic_low_pay1" Type="float" Nullable="false" />
+    <Property Name="statistic_routine3" Type="float" Nullable="false" />
+    <Property Name="statistic_routine2" Type="float" Nullable="false" />
+    <Property Name="statistic_routine1" Type="float" Nullable="false" />
+    <Property Name="statistic_long_job_seeking3" Type="float" Nullable="false" />
+    <Property Name="statistic_long_job_seeking2" Type="float" Nullable="false" />
+    <Property Name="statistic_long_job_seeking1" Type="float" Nullable="false" />
+    <Property Name="statistic_not_enough_experience3" Type="float" Nullable="false" />
+    <Property Name="statistic_not_enough_experience2" Type="float" Nullable="false" />
+    <Property Name="statistic_not_enough_experience1" Type="float" Nullable="false" />
+    <Property Name="statistic_contract3" Type="float" Nullable="false" />
+    <Property Name="statistic_contract2" Type="float" Nullable="false" />
+    <Property Name="statistic_contract1" Type="float" Nullable="false" />
+    <Property Name="statistic_kill_creativity3" Type="float" Nullable="false" />
+    <Property Name="statistic_kill_creativity2" Type="float" Nullable="false" />
+    <Property Name="statistic_kill_creativity1" Type="float" Nullable="false" />
+    <Property Name="statistic_seeker_update_content3" Type="float" Nullable="false" />
+    <Property Name="statistic_seeker_update_content2" Type="float" Nullable="false" />
+    <Property Name="statistic_seeker_update_content1" Type="float" Nullable="false" />
+    <Property Name="statistic_traning3" Type="float" Nullable="false" />
+    <Property Name="statistic_traning2" Type="float" Nullable="false" />
+    <Property Name="statistic_traning1" Type="float" Nullable="false" />
+    <Property Name="statistic_keep_updated3" Type="float" Nullable="false" />
+    <Property Name="statistic_keep_updated2" Type="float" Nullable="false" />
+    <Property Name="statistic_keep_updated1" Type="float" Nullable="false" />
+    <Property Name="statistic_field_trips3" Type="float" Nullable="false" />
+    <Property Name="statistic_field_trips2" Type="float" Nullable="false" />
+    <Property Name="statistic_field_trips1" Type="float" Nullable="false" />
+    <Property Name="statistic_seeker_isActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="system_licensed_companies">
+    <Key>
+      <PropertyRef Name="licensed_comp_licenseNumber" />
+    </Key>
+    <Property Name="licensed_comp_licenseNumber" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="trainings">
+    <Key>
+      <PropertyRef Name="training_id" />
+    </Key>
+    <Property Name="training_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="advert_id" Type="int" />
+    <Property Name="training_instructor" Type="varchar" MaxLength="100" />
+    <Property Name="training_cost" Type="float" />
+    <Property Name="training_location" Type="varchar" MaxLength="100" />
+    <Property Name="training___details" Type="varchar(max)" />
+    <Property Name="trainingStartDate" Type="date" />
+    <Property Name="trainingEndDate" Type="date" />
+  </EntityType>
+  <Association Name="FK_advertisement_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+    <End Role="advertisements" Type="Self.advertisements" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="advertisements">
+        <PropertyRef Name="aspNetUsersId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_applicant_to_training_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+    <End Role="applicant_to_trainings" Type="Self.applicant_to_trainings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="applicant_to_trainings">
+        <PropertyRef Name="aspNetUsersId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_applicants_to_job_offer_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+    <End Role="applicants_to_job_offers" Type="Self.applicants_to_job_offers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="applicants_to_job_offers">
+        <PropertyRef Name="aspNetUsersId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_applicants_to_job_offer_job_offer">
+    <End Role="job_offers" Type="Self.job_offers" Multiplicity="1" />
+    <End Role="applicants_to_job_offers" Type="Self.applicants_to_job_offers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="job_offers">
+        <PropertyRef Name="advert_id" />
+      </Principal>
+      <Dependent Role="applicants_to_job_offers">
+        <PropertyRef Name="job_offer_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_company_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+    <End Role="companies" Type="Self.companies" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="companies">
+        <PropertyRef Name="aspNetUsersId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_company_qustion_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+    <End Role="company_qustions" Type="Self.company_qustions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="company_qustions">
+        <PropertyRef Name="aspNetUsersId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_company_system_licensed_company">
+    <End Role="system_licensed_companies" Type="Self.system_licensed_companies" Multiplicity="1" />
+    <End Role="companies" Type="Self.companies" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="system_licensed_companies">
+        <PropertyRef Name="licensed_comp_licenseNumber" />
+      </Principal>
+      <Dependent Role="companies">
+        <PropertyRef Name="licensed_comp_licenseNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserClaims" Type="Self.AspNetUserClaims" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserClaims">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserLogins" Type="Self.AspNetUserLogins" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserLogins">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+    <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetRoles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_feedback_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+    <End Role="feedbacks" Type="Self.feedbacks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="feedbacks">
+        <PropertyRef Name="aspNetUsersId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_job_offer_advertisement">
+    <End Role="advertisements" Type="Self.advertisements" Multiplicity="1" />
+    <End Role="job_offers" Type="Self.job_offers" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="advertisements">
+        <PropertyRef Name="advert_id" />
+      </Principal>
+      <Dependent Role="job_offers">
+        <PropertyRef Name="advert_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_job_seeker_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+    <End Role="job_seekers" Type="Self.job_seekers" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="job_seekers">
+        <PropertyRef Name="aspNetUsersId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_qustion_seeker_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+    <End Role="qustion_seekers" Type="Self.qustion_seekers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="qustion_seekers">
+        <PropertyRef Name="aspNetUsersId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_report_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+    <End Role="reports" Type="Self.reports" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="reports">
+        <PropertyRef Name="aspNetUsersId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_skill_job_offer">
+    <End Role="job_offers" Type="Self.job_offers" Multiplicity="0..1" />
+    <End Role="skills" Type="Self.skills" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="job_offers">
+        <PropertyRef Name="advert_id" />
+      </Principal>
+      <Dependent Role="skills">
+        <PropertyRef Name="offer_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_skill_job_seeker">
+    <End Role="job_seekers" Type="Self.job_seekers" Multiplicity="0..1" />
+    <End Role="skills" Type="Self.skills" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="job_seekers">
+        <PropertyRef Name="aspNetUsersId" />
+      </Principal>
+      <Dependent Role="skills">
+        <PropertyRef Name="seeker_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_statistic_comp_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+    <End Role="statistic_comps" Type="Self.statistic_comps" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="statistic_comps">
+        <PropertyRef Name="aspNetUsersId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_statistic_seeker_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+    <End Role="statistic_seekers" Type="Self.statistic_seekers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="statistic_seekers">
+        <PropertyRef Name="aspNetUsersId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_training_advertisement">
+    <End Role="advertisements" Type="Self.advertisements" Multiplicity="0..1" />
+    <End Role="trainings" Type="Self.trainings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="advertisements">
+        <PropertyRef Name="advert_id" />
+      </Principal>
+      <Dependent Role="trainings">
+        <PropertyRef Name="advert_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_training_applicant_to_training">
+    <End Role="trainings" Type="Self.trainings" Multiplicity="1" />
+    <End Role="applicant_to_trainings" Type="Self.applicant_to_trainings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="trainings">
+        <PropertyRef Name="training_id" />
+      </Principal>
+      <Dependent Role="applicant_to_trainings">
+        <PropertyRef Name="training_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="LMO_DBModelStoreContainer">
+    <EntitySet Name="advertisements" EntityType="Self.advertisements" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="applicant_to_trainings" EntityType="Self.applicant_to_trainings" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="applicants_to_job_offers" EntityType="Self.applicants_to_job_offers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="C__MigrationHistory" EntityType="Self.C__MigrationHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="companies" EntityType="Self.companies" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="company_qustions" EntityType="Self.company_qustions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="feedbacks" EntityType="Self.feedbacks" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="job_offers" EntityType="Self.job_offers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="job_seekers" EntityType="Self.job_seekers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="qustion_seekers" EntityType="Self.qustion_seekers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="reports" EntityType="Self.reports" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="skills" EntityType="Self.skills" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="statistic_comps" EntityType="Self.statistic_comps" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="statistic_seekers" EntityType="Self.statistic_seekers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="system_licensed_companies" EntityType="Self.system_licensed_companies" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="trainings" EntityType="Self.trainings" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_advertisement_AspNetUsers" Association="Self.FK_advertisement_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="advertisements" EntitySet="advertisements" />
+    </AssociationSet>
+    <AssociationSet Name="FK_applicant_to_training_AspNetUsers" Association="Self.FK_applicant_to_training_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="applicant_to_trainings" EntitySet="applicant_to_trainings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_applicants_to_job_offer_AspNetUsers" Association="Self.FK_applicants_to_job_offer_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="applicants_to_job_offers" EntitySet="applicants_to_job_offers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_applicants_to_job_offer_job_offer" Association="Self.FK_applicants_to_job_offer_job_offer">
+      <End Role="job_offers" EntitySet="job_offers" />
+      <End Role="applicants_to_job_offers" EntitySet="applicants_to_job_offers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_company_AspNetUsers" Association="Self.FK_company_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="companies" EntitySet="companies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_company_qustion_AspNetUsers" Association="Self.FK_company_qustion_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="company_qustions" EntitySet="company_qustions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_company_system_licensed_company" Association="Self.FK_company_system_licensed_company">
+      <End Role="system_licensed_companies" EntitySet="system_licensed_companies" />
+      <End Role="companies" EntitySet="companies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_feedback_AspNetUsers" Association="Self.FK_feedback_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="feedbacks" EntitySet="feedbacks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_job_offer_advertisement" Association="Self.FK_job_offer_advertisement">
+      <End Role="advertisements" EntitySet="advertisements" />
+      <End Role="job_offers" EntitySet="job_offers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_job_seeker_AspNetUsers" Association="Self.FK_job_seeker_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="job_seekers" EntitySet="job_seekers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_qustion_seeker_AspNetUsers" Association="Self.FK_qustion_seeker_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="qustion_seekers" EntitySet="qustion_seekers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_report_AspNetUsers" Association="Self.FK_report_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="reports" EntitySet="reports" />
+    </AssociationSet>
+    <AssociationSet Name="FK_skill_job_offer" Association="Self.FK_skill_job_offer">
+      <End Role="job_offers" EntitySet="job_offers" />
+      <End Role="skills" EntitySet="skills" />
+    </AssociationSet>
+    <AssociationSet Name="FK_skill_job_seeker" Association="Self.FK_skill_job_seeker">
+      <End Role="job_seekers" EntitySet="job_seekers" />
+      <End Role="skills" EntitySet="skills" />
+    </AssociationSet>
+    <AssociationSet Name="FK_statistic_comp_AspNetUsers" Association="Self.FK_statistic_comp_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="statistic_comps" EntitySet="statistic_comps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_statistic_seeker_AspNetUsers" Association="Self.FK_statistic_seeker_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="statistic_seekers" EntitySet="statistic_seekers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_training_advertisement" Association="Self.FK_training_advertisement">
+      <End Role="advertisements" EntitySet="advertisements" />
+      <End Role="trainings" EntitySet="trainings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_training_applicant_to_training" Association="Self.FK_training_applicant_to_training">
+      <End Role="trainings" EntitySet="trainings" />
+      <End Role="applicant_to_trainings" EntitySet="applicant_to_trainings" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

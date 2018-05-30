@@ -1,0 +1,63 @@
+﻿@model LaburMarketObservatoryMVC5.Models.Report
+
+@{
+    ViewBag.Title = "اضافة";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>اضافة</h2>
+
+
+@using (Html.BeginForm("Create", "Reports", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>تقرير</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.report_date, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.report_date, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.report_date, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.report_title, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.report_title, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.report_title, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.report_file, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @*@Html.TextBoxFor(model => model.report_file, new { type = "file", id = "file1", name = "file1" })
+                @Html.ValidationMessageFor(model => model.report_file, "", new { @class = "text-danger" })*@
+
+                <input type="file" id="file1" name="file1" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="اضافة" class="btn btn-success" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("العودة الى القائمة", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+@*  style = "display: block; width: 100%;  height: 34px;  padding: 6px 12px;  font-size: 14px;  line-height: 1.428571429;  color: #555555;  vertical-align: middle;  background-color: #ffffff;  background-image: none;  border: 1px solid #cccccc;  border-radius: 4px;  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;          transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;" *@
